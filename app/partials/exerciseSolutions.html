@@ -1,0 +1,18 @@
+<div>
+    <div ng-if="activeExercise == 1">
+        <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="namePrepend">Name</span>
+            </div>
+            <input type="text" class="form-control form-control-md" id="name" ng-model="name" placeholder="Enter your name"
+                aria-describedby="namePrepend">
+        </div>
+        <div class="border p-4" id="siri">
+            <h1 class="h1"><span ng-show="name">Welcome {{name}}. </span>How may I serve you today?</h1>
+        </div>
+    </div>
+
+    <div ng-if="activeExercise == 2">
+
+    </div>
+</div>

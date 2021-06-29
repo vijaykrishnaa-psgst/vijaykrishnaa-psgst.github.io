@@ -1,25 +1,16 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+html,body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
-
-.menu:before {
-  content: "[";
+.card-height{
+  height: 85vh;
+  overflow-y: auto;
 }
-
-.menu:after {
-  content: "]";
+.btn{
+  font-weight: 500 !important;
 }
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.button-width{
+  width: 12em;
 }
