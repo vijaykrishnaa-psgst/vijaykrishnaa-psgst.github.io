@@ -1,3 +1,20 @@
-<p>This is the partial for view 1.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odit quo accusamus quibusdam cumque quaerat itaque
-    cupiditate error ad laborum atque totam magnam architecto soluta facilis impedit possimus repellendus cum?</p>
+<div class="container-fluid p-3 p-lg-5">
+    <div class="card card-height shadow-sm border-2">
+        <div class="card-body">
+
+            <div class="card-content text-justify" ng-show="NavigateExercises">
+                <h3 class="card-title bg-secondary text-light text-center p-3">AngularJS Learning Exercises</h3>
+                <div class="d-inline-flex m-2" ng-repeat="(key, value) in exercises">
+                    <button type="button" class="btn btn-outline-secondary button-width" ng-click="goToExercise(key)">
+                        Exercise - {{key}}
+                    </button>
+                </div>
+            </div>
+
+            <div ng-show="exerciseView">
+                <exercise-view></exercise-view>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div>
+    <h3 class="card-title bg-secondary text-light p-3 text-center">Exercise - {{activeExercise}}</h3>
+    <div class="d-inline" style="min-width: 100%;">
+        <button type="button" class="btn btn-outline-secondary" ng-click="goBack()">Back</button>
+        <div class="float-right">
+            <button type="button" class="btn btn-outline-secondary mr-2" ng-show="showPrevious()"
+                ng-click="goToPrevious(activeExercise)">
+                Previous
+            </button>
+            <button type="button" class="btn btn-outline-secondary" ng-show="showNext()"
+                ng-click="goToNext(activeExercise)">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-5 p-3" id="exercise-content">
+        <exercise-question class="mb-4"></exercise-question>
+        <exercise-solution></exercise-solution>
+    </div>
+</div>
