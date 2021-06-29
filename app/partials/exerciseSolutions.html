@@ -4,15 +4,44 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="namePrepend">Name</span>
             </div>
-            <input type="text" class="form-control form-control-md" id="name" ng-model="name" placeholder="Enter your name"
-                aria-describedby="namePrepend">
+            <input type="text" class="form-control form-control-md" id="name" ng-model="name"
+                placeholder="Enter your name" aria-describedby="namePrepend">
         </div>
-        <div class="border p-4" id="siri">
-            <h1 class="h1"><span ng-show="name">Welcome {{name}}. </span>How may I serve you today?</h1>
+        <div class="border bg-light p-4" id="siri">
+            <h1 class="h1 text-dark"><span ng-show="name">Welcome <strong>{{name}}</strong>. </span>How may I serve you
+                today?</h1>
         </div>
     </div>
 
     <div ng-if="activeExercise == 2">
-
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="numberOnePrepend">Number 1</span>
+                    </div>
+                    <input type="number" class="form-control form-control-md" id="number1" ng-model="number1"
+                        placeholder="Enter an evil number" aria-describedby="numberOnePrepend">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="numberTwoPrepend">Number 2</span>
+                    </div>
+                    <input type="number" class="form-control form-control-md" id="number2" ng-model="number2"
+                        placeholder="And another" aria-describedby="numberTwoPrepend">
+                </div>
+            </div>
+            <div class="col">
+                <div class="border bg-light p-5" id="calculator">
+                    <ul ng-show="number1 || number2">
+                        <li> {{number1}} + {{number2}} = {{ number1 + number2 }} </li>
+                        <li> {{number1}} - {{number2}} = {{ number1 - number2 }} </li>
+                        <li> {{number1}} * {{number2}} = {{ number1 * number2 }} </li>
+                        <li> {{number1}} / {{number2}} = {{ number1 / number2 }} </li>
+                    </ul>
+                    <span class="h5 text-dark" ng-show="!(number1 || number2)">Enter both the numbers</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
