@@ -1,4 +1,5 @@
 <div>
+
     <div class="p-2" ng-if="activeExercise == 1">
         <h4 class="h3">Evil Siri</h4>
         <p class="lead text-justify">
@@ -15,9 +16,40 @@
         <p class="lead text-justify">
             As an evil genius, you need a calculator to help you work how many helidrones you will need to
             steal the houses of parliament.
-            Let's build one now. There are two input fields, each with a number, 
+            Let's build one now. There are two input fields, each with a number,
             Use the curly brace syntax or ng-bind to output the sum of the two numbers.
             When you fill in the fields, output a little list in HTML.
         </p>
     </div>
+
+    <div class="p-2" ng-if="activeExercise == 3">
+        <h4 class="h3">Time remaining</h4>
+        <p class="lead text-justify">
+            Add a little input box that lets us type in a your age in years.
+            Output the number of weeks in your life so far. Have it output the approximate number of weeks
+            remaining. Output a percentage completion.
+        </p>
+    </div>
+
+    <div class="p-2" ng-if="activeExercise == 4">
+        <h4 class="h3">Profile Widget</h4>
+        <p class="lead text-justify">
+            You are an entrepreneur, creating the next LinkedIn. Users of your awesome service have said
+            that they would like to be able to choose a profile picture just by entering a URL.
+            We are going to allow people to type in a profile picture url and have that picture appear
+            immediately. Create a field and bind it to a model called something like "avatarUrl".
+            Now use the avatarUrl as the src attribute of an img tag.
+        </p>
+    </div>
+
+    <div class="p-2" ng-if="activeExercise == 5">
+        <h4 class="h3">Profile form</h4>
+        <p class="lead text-justify">
+            Extend your app so you can type in your name. This will update the the alt text on the image, and
+            an h2 somewhere on the page.
+            Add in a description textarea. This will update the a paragraph of description text under the
+            image.
+        </p>
+    </div>
+
 </div>

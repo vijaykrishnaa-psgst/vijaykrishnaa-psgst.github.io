@@ -59,6 +59,12 @@ angular.module('myApp.view1', ['ngRoute'])
       loadExercise();
     }
 
+    // Exercise 3 
+    $scope.weeksCompletedSoFar = function(){
+      var currentYear = new Date().getFullYear();
+      var birthYear = currentYear - $scope.age;
+    }
+
   })
 
   .directive('exerciseView', function () {
