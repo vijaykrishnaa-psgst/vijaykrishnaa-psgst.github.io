@@ -1,15 +1,20 @@
 <div>
     <h3 class="card-title bg-secondary text-light p-3 text-center">Exercise - {{activeExercise}}</h3>
     <div class="d-inline" style="min-width: 100%;">
-        <button type="button" class="btn btn-outline-secondary" ng-click="goBack()">Back</button>
+        <button type="button" class="btn btn-outline-secondary h6" ng-click="goBack()">
+            <i class="bi bi-arrow-left-circle mr-2"></i>
+            Back
+        </button>
         <div class="float-right">
-            <button type="button" class="btn btn-outline-secondary mr-2" ng-show="showPrevious()"
+            <button type="button" class="btn btn-outline-secondary h6 mr-2" ng-show="showPrevious()"
                 ng-click="goToPrevious(activeExercise)">
+                <i class="bi bi-arrow-left mr-2"></i>
                 Previous
             </button>
-            <button type="button" class="btn btn-outline-secondary" ng-show="showNext()"
+            <button type="button" class="btn btn-outline-secondary h6" ng-show="showNext()"
                 ng-click="goToNext(activeExercise)">
                 Next
+                <i class="bi bi-arrow-right ml-2"></i>
             </button>
         </div>
     </div>
