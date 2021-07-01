@@ -9,11 +9,17 @@
                 placeholder="Enter your name" aria-describedby="namePrepend">
         </div>
         <div class="border bg-light p-4" id="siri">
-            <i class="bi bi-chat-right-dots-fill h3 text-secondary mr-2"></i>
-            <h1 ng-if="name" class="h1 text-dark"><span ng-show="name">Welcome <strong>{{name}}</strong>. </span>How may
-                I serve you
-                today?</h1>
-            <span class="h2" ng-if="!name">Hi! Enter your Name</span>
+            <div class="row">
+                <div class="col-1 pr-0">
+                    <i class="bi bi-chat-right-dots-fill h2 text-secondary mr-2"></i>
+                </div>
+                <div class="col pl-0">
+                    <h1 ng-if="name" class="h1 text-dark"><span ng-show="name">Welcome <strong>{{name}}</strong>. </span>How may
+                        I serve you
+                        today?</h1>
+                    <span class="h2" ng-if="!name">Hi! Enter your Name</span>
+                </div>
+            </div>
         </div>
     </div>
 
