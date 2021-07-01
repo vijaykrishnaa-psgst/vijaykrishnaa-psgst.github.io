@@ -118,6 +118,15 @@ angular.module('myApp.view1', ['ngRoute'])
 
   })
 
+  .controller('profileController', function($scope){
+    // Exercise 7
+    $scope.profileName2 = "Sachin Tendulkar";
+    $scope.profileUrl2 = "https://i.guim.co.uk/img/media/e48964955c4ae13e460e56a0a550097208637bbd/0_286_4365_2619/master/4365.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=782322cd3e077855b0a5cf874a79afdb";
+    $scope.description2 = `Sachin Ramesh Tendulkar is an Indian former international cricketer who served as captain of the Indian national team.
+                           He is widely regarded as one of the greatest batsmen in the history of cricket. He is the highest run scorer of all time in international cricket, and 
+                           the only player to have scored one hundred international centuries.`;
+  })
+
   .directive('exerciseView', function () {
     return {
       restrict: 'EA',
