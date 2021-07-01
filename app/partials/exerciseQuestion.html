@@ -6,8 +6,8 @@
             You are a crazy scientist building an AI for world domination. For reasons known only to you,
             you have chosen Angular to help you in this epic task. Your first job is to teach your new
             creation to greet you by name.
-            Write an Angular template which contains an "enter your name" form. As you type, it updates
-            the page with an h1 tag.
+            Write an Angular template which contains an <mark>"enter your name"</mark> form. As you type, it updates
+            the page with an <code>h1</code> tag.
         </p>
     </div>
 
@@ -17,7 +17,7 @@
             As an evil genius, you need a calculator to help you work how many helidrones you will need to
             steal the houses of parliament.
             Let's build one now. There are two input fields, each with a number,
-            Use the curly brace syntax or ng-bind to output the sum of the two numbers.
+            Use the curly brace syntax or <code>ng-bind</code> to output the sum of the two numbers.
             When you fill in the fields, output a little list in HTML.
         </p>
     </div>
@@ -38,17 +38,17 @@
             You are an entrepreneur, creating the next LinkedIn. Users of your awesome service have said
             that they would like to be able to choose a profile picture just by entering a URL.
             We are going to allow people to type in a profile picture url and have that picture appear
-            immediately. Create a field and bind it to a model called something like "avatarUrl".
-            Now use the avatarUrl as the src attribute of an img tag.
+            immediately. Create a field and bind it to a model called something like <mark>"avatarUrl"</mark>.
+            Now use the avatarUrl as the <code>src</code> attribute of an <code>img</code> tag.
         </p>
     </div>
 
     <div class="p-2" ng-if="activeExercise == 5">
         <h4 class="h3">Profile form</h4>
         <p class="lead text-justify">
-            Extend your app so you can type in your name. This will update the the alt text on the image, and
-            an h2 somewhere on the page.
-            Add in a description textarea. This will update the a paragraph of description text under the
+            Extend your app so you can type in your name. This will update the the <code>alt</code> text on the image, and
+            an <code>h2</code> somewhere on the page.
+            Add in a description <code>textarea</code>. This will update the a paragraph of description text under the
             image.
         </p>
     </div>
@@ -58,18 +58,18 @@
         <p class="lead text-justify">
             We are going to hide the edit fields when they are not needed so that we either see the edit form
             or the profile.
-            Add in a checkbox. Bind it using ng-model. When the checkbox is checked, the edit fields are
-            visible. When is is not checked, the edit fields are hidden. Use ng-show to make this work.
+            Add in a checkbox. Bind it using <code>ng-model</code>. When the checkbox is checked, the edit fields are
+            visible. When is not checked, the edit fields are hidden. Use <code>ng-show</code> to make this work.
         </p>
     </div>
 
     <div class="p-2" ng-if="activeExercise == 7">
         <h4 class="h3"> Control yourself </h4>
         <p class="lead text-justify">
-            We are going to add a profileController to your super advanced profile form from the previous
+            We are going to add a <code>profileController</code> to your super advanced profile form from the previous
             exercise. <br>
-            1. Create a profileController. Use ng-controller to add it to your profile form. <br>
-            2. In your controller, set a default name, description and profile picture URL
+            1. Create a <code>profileController</code>. Use <code>ng-controller</code> to add it to your profile form. <br>
+            2. In your controller, set a default name, description and profile picture URL.
         </p>
     </div>
 
@@ -78,9 +78,9 @@
         <p class="lead text-justify">
             Extend the calculator exercise. We are going to create a function to allow us to zero all the
             values. <br>
-            1. Create a function in your controller which zeros number1 and number2. Add it to $scope. It is
+            1. Create a function in your controller which zeros <code>number1</code> and <code>number2</code>. Add it to <code>$scope</code>. It is
             now available in your front end. <br>
-            2. Add a button to your DOM and use ng-click to call the function.
+            2. Add a button to your DOM and use <code>ng-click</code> to call the function.
         </p>
     </div>
 
@@ -89,7 +89,7 @@
         <p class="lead text-justify">
             Extend the profile exercise from the previous section. We should be able to have multiple profile
             widgets on the same page. Copy and paste a few out. Type in one. Notice how they are separate
-            units of interaction, each with its own controller and $scope.
+            units of interaction, each with its own controller and <code>$scope</code>.
         </p>
     </div>
 
@@ -98,8 +98,17 @@
         <p class="lead text-justify">
             Instead of having the profile widgets next to each other, nest them inside one another. Have a
             play and see how they interact. This might be surprising for the user.
-            Modify your controller so that all of the $scope attributes which make the form work are nested
+            Modify your controller so that all of the <code>$scope</code> attributes which make the form work are nested
             inside a JSON object called profile.
+        </p>
+    </div>
+
+    <div class="p-2" ng-if="activeExercise == 11">
+        <h4 class="h3"> Storing data on the controller </h4>
+        <p class="lead text-justify">
+            We are now using the controller as a handy model store. In your controller store your controller
+            (this) in <code>$scope</code>. Now add your person model as an attribute of <code>this</code>.
+            so can now access your controller and associated model in your view.
         </p>
     </div>
 
