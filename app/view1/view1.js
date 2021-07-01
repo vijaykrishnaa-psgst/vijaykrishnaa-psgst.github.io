@@ -127,6 +127,14 @@ angular.module('myApp.view1', ['ngRoute'])
                            the only player to have scored one hundred international centuries.`;
   })
 
+  .controller('calculatorController', function($scope){
+    // Exercise 8
+    $scope.setNumbers = function(){
+      $scope.number1 = 0;
+      $scope.number2 = 0;
+    }
+  })
+
   .directive('exerciseView', function () {
     return {
       restrict: 'EA',

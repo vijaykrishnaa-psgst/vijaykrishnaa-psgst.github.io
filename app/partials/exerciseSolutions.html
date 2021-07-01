@@ -356,4 +356,38 @@
         </div>
     </div>
 
+    <div ng-if="activeExercise == 8" ng-controller="calculatorController">
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="numberOnePrepend">Number 1</span>
+                    </div>
+                    <input type="number" class="form-control form-control-md" id="number1" ng-model="number1"
+                        placeholder="Enter an evil number" aria-describedby="numberOnePrepend">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="numberTwoPrepend">Number 2</span>
+                    </div>
+                    <input type="number" class="form-control form-control-md" id="number2" ng-model="number2"
+                        placeholder="And another" aria-describedby="numberTwoPrepend">
+                </div>
+                <button class="btn btn-primary" ng-click="setNumbers()">
+                    Set Values
+                </button>
+            </div>
+            <div class="col">
+                <div class="border bg-light p-4" id="calculator">
+                    <ul class="list-group">
+                        <li class="list-group-item"> {{number1}} + {{number2}} = {{ number1 + number2 }} </li>
+                        <li class="list-group-item"> {{number1}} - {{number2}} = {{ number1 - number2 }} </li>
+                        <li class="list-group-item"> {{number1}} * {{number2}} = {{ number1 * number2 }} </li>
+                        <li class="list-group-item"> {{number1}} / {{number2}} = {{ number1 / number2 }} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
