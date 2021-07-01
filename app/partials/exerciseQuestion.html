@@ -84,4 +84,23 @@
         </p>
     </div>
 
+    <div class="p-2" ng-if="activeExercise == 9">
+        <h4 class="h3"> Multiple profile widgets </h4>
+        <p class="lead text-justify">
+            Extend the profile exercise from the previous section. We should be able to have multiple profile
+            widgets on the same page. Copy and paste a few out. Type in one. Notice how they are separate
+            units of interaction, each with its own controller and $scope.
+        </p>
+    </div>
+
+    <div class="p-2" ng-if="activeExercise == 10">
+        <h4 class="h3"> Nested controllers and controller isolation </h4>
+        <p class="lead text-justify">
+            Instead of having the profile widgets next to each other, nest them inside one another. Have a
+            play and see how they interact. This might be surprising for the user.
+            Modify your controller so that all of the $scope attributes which make the form work are nested
+            inside a JSON object called profile.
+        </p>
+    </div>
+
 </div>

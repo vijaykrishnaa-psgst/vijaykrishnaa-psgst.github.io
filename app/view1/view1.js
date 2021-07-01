@@ -118,7 +118,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
   })
 
-  .controller('profileController', function($scope){
+  .controller('profileController', function ($scope) {
     // Exercise 7
     $scope.profileName2 = "Sachin Tendulkar";
     $scope.profileUrl2 = "https://i.guim.co.uk/img/media/e48964955c4ae13e460e56a0a550097208637bbd/0_286_4365_2619/master/4365.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=782322cd3e077855b0a5cf874a79afdb";
@@ -127,9 +127,35 @@ angular.module('myApp.view1', ['ngRoute'])
                            the only player to have scored one hundred international centuries.`;
   })
 
-  .controller('calculatorController', function($scope){
+  .controller('profileController1', function ($scope) {
+    // Exercise 9
+    $scope.profileName2 = "Sachin Tendulkar";
+    $scope.profileUrl2 = "https://i.guim.co.uk/img/media/e48964955c4ae13e460e56a0a550097208637bbd/0_286_4365_2619/master/4365.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=782322cd3e077855b0a5cf874a79afdb";
+    $scope.description2 = `Sachin Ramesh Tendulkar is an Indian former international cricketer who served as captain of the Indian national team.
+                           He is widely regarded as one of the greatest batsmen in the history of cricket. He is the highest run scorer of all time in international cricket, and 
+                           the only player to have scored one hundred international centuries.`;
+  })
+
+  .controller('profileController2', function ($scope) {
+    // Exercise 9
+    $scope.profileName2 = "AngularJs";
+    $scope.profileUrl2 = "https://miro.medium.com/max/1176/1*15CYVZdpsxir8KLdxEZytg.png";
+    $scope.description2 = `AngularJS is a very powerful JavaScript Framework. It is used in Single Page Application (SPA) projects. 
+                           It extends HTML DOM with additional attributes and makes it more responsive to user actions. 
+                           AngularJS is open source, completely free, and used by thousands of developers around the world. 
+                           It is licensed under the Apache license version 2.0.`;
+  })
+
+  .controller('profileController3', function ($scope) {
+    // Exercise 9
+    $scope.profileName2 = "";
+    $scope.profileUrl2 = "";
+    $scope.description2 = "";
+  })
+
+  .controller('calculatorController', function ($scope) {
     // Exercise 8
-    $scope.setNumbers = function(){
+    $scope.setNumbers = function () {
       $scope.number1 = 0;
       $scope.number2 = 0;
     }
