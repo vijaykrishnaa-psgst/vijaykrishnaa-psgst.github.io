@@ -109,6 +109,13 @@ angular.module('myApp.view1', ['ngRoute'])
                            He is widely regarded as one of the greatest batsmen in the history of cricket. He is the highest run scorer of all time in international cricket, and 
                            the only player to have scored one hundred international centuries.`;
 
+    // Exercise 6
+    $scope.profileName2 = "Sachin Tendulkar";
+    $scope.profileUrl2 = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sachin_Tendulkar_at_MRF_Promotion_Event.jpg/260px-Sachin_Tendulkar_at_MRF_Promotion_Event.jpg";
+    $scope.description2 = `Sachin Ramesh Tendulkar is an Indian former international cricketer who served as captain of the Indian national team.
+                           He is widely regarded as one of the greatest batsmen in the history of cricket. He is the highest run scorer of all time in international cricket, and 
+                           the only player to have scored one hundred international centuries.`;
+
   })
 
   .directive('exerciseView', function () {
