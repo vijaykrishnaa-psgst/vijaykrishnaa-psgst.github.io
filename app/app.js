@@ -86,4 +86,13 @@ angular.module('myApp', [
       templateUrl: 'app/partials/exerciseSolutions.html',
       controller: 'View1Ctrl'
     }
+  })
+
+  .directive('exerciseSolutionOne', function () {
+    return {
+      restrict: 'EA',
+      templateUrl: 'app/partials/exerciseSolutions1.html',
+      controller: 'View1Ctrl'
+    }
   });
+
