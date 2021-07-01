@@ -114,20 +114,23 @@ angular.module('myApp.view1', ['ngRoute'])
   .directive('exerciseView', function () {
     return {
       restrict: 'EA',
-      templateUrl: 'app/partials/exerciseView.html'
+      templateUrl: 'app/partials/exerciseView.html',
+      controller: 'View1Ctrl'
     }
   })
 
   .directive('exerciseQuestion', function () {
     return {
       restrict: 'EA',
-      templateUrl: 'app/partials/exerciseQuestion.html'
+      templateUrl: 'app/partials/exerciseQuestion.html',
+      controller: 'View1Ctrl'
     }
   })
 
   .directive('exerciseSolution', function () {
     return {
       restrict: 'EA',
-      templateUrl: 'app/partials/exerciseSolutions.html'
+      templateUrl: 'app/partials/exerciseSolutions.html',
+      controller: 'View1Ctrl'
     }
   });
