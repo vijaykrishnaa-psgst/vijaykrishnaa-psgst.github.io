@@ -46,7 +46,8 @@
     <div class="p-2" ng-if="activeExercise == 5">
         <h4 class="h3">Profile form</h4>
         <p class="lead text-justify">
-            Extend your app so you can type in your name. This will update the the <code>alt</code> text on the image, and
+            Extend your app so you can type in your name. This will update the the <code>alt</code> text on the image,
+            and
             an <code>h2</code> somewhere on the page.
             Add in a description <code>textarea</code>. This will update the a paragraph of description text under the
             image.
@@ -68,7 +69,8 @@
         <p class="lead text-justify">
             We are going to add a <code>profileController</code> to your super advanced profile form from the previous
             exercise. <br>
-            1. Create a <code>profileController</code>. Use <code>ng-controller</code> to add it to your profile form. <br>
+            1. Create a <code>profileController</code>. Use <code>ng-controller</code> to add it to your profile form.
+            <br>
             2. In your controller, set a default name, description and profile picture URL.
         </p>
     </div>
@@ -78,7 +80,8 @@
         <p class="lead text-justify">
             Extend the calculator exercise. We are going to create a function to allow us to zero all the
             values. <br>
-            1. Create a function in your controller which zeros <code>number1</code> and <code>number2</code>. Add it to <code>$scope</code>. It is
+            1. Create a function in your controller which zeros <code>number1</code> and <code>number2</code>. Add it to
+            <code>$scope</code>. It is
             now available in your front end. <br>
             2. Add a button to your DOM and use <code>ng-click</code> to call the function.
         </p>
@@ -113,9 +116,16 @@
     </div>
 
     <div class="p-2" ng-if="activeExercise == 12">
-        <h4 class="h3">  </h4>
+        <h4 class="h3"> Watching and Applying </h4>
         <p class="lead text-justify">
-            
+            We are going to hack some quick validation into our profile form. We'll see the right way to do
+            validation using directives in a bit.
+            Extend your profile form with a <code>$scope.person.name</code> field. Let's make name mandatory. use
+            <code>$scope.$watch</code> to watch the <code>'person.name'</code> property of scope.
+            If the value is not blank, set <code>$scope.errors = false</code>.
+            Otherwise set <code>$scope.errors = {name: "should not be blank."}</code>.
+            Now in your template, use <code>ng-show</code> to show a nice warning message if
+            <code>errors != false</code>.
         </p>
     </div>
 

@@ -83,13 +83,15 @@
                             <div class="row">
                                 <div class="col" ng-if="addEmail">
                                     <p class="text-secondary h5 text-justify py-2 pr-4 pl-0" ng-if="vm.profile.email">
-                                        <i class="bi bi-envelope mr-2"></i> <span ng-bind-html="vm.profile.email"></span>
+                                        <i class="bi bi-envelope mr-2"></i> <span
+                                            ng-bind-html="vm.profile.email"></span>
                                     </p>
                                     <p class="text-dark pt-2" ng-if="addEmail && !vm.profile.email">Email Address</p>
                                 </div>
                                 <div class="col" ng-if="addContact">
                                     <p class="text-secondary h5 text-justify py-2 pr-4 pl-0" ng-if="vm.profile.contact">
-                                        <i class="bi bi-telephone mr-2"></i> <span ng-bind-html="vm.profile.contact"></span>
+                                        <i class="bi bi-telephone mr-2"></i> <span
+                                            ng-bind-html="vm.profile.contact"></span>
                                     </p>
                                     <p class="text-dark pt-2" ng-if="addContact && !vm.profile.contact">Contact info</p>
                                 </div>
@@ -101,8 +103,108 @@
         </div>
     </div>
 
-    <div ng-if="activeExercise == 12">
-
+    <div ng-if="activeExercise == 12" ng-controller="watchController">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-lg mb-1" ng-class="{'mb-3': errors == false}">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="profileName1Prepend">Name</span>
+                    </div>
+                    <input type="text" class="form-control form-control-md" id="profileName1" ng-model="person.name"
+                        placeholder="Enter your Name" aria-describedby="profileName1Prepend">
+                </div>
+                <div class="mb-2" ng-show="errors">
+                    <small class="text-danger pl-3" ng-bind-html="errors.name"></small>
+                </div>
+                <div class="input-group input-group-lg mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="profileUrl1Prepend">Profile URL</span>
+                    </div>
+                    <input type="text" class="form-control form-control-md" id="profileUrl1" ng-model="person.url"
+                        placeholder="Enter a url" aria-describedby="profileUrl1Prepend">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="description1Prepend">Description</span>
+                    </div>
+                    <textarea class="form-control form-control-md" id="description1" ng-model="person.description"
+                        height="200" placeholder="Describe in words" aria-label="Description"></textarea>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="emailCheckbox"
+                                ng-model="person.addEmail">
+                            <label class="form-check-label" for="emailCheckbox">Add Email</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group" ng-show="person.addEmail">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="email1Prepend">Email</span>
+                            </div>
+                            <input type="email" class="form-control form-control-md" id="email1" ng-model="person.email"
+                                placeholder="Enter your email address" aria-describedby="email1Prepend">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="mobileCheckbox"
+                                ng-model="person.addContact">
+                            <label class="form-check-label" for="mobileCheckbox">Add Contact no</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group" ng-show="person.addContact">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="contact1Prepend">Contact No</span>
+                            </div>
+                            <input type="number" class="form-control form-control-md" id="contact1"
+                                ng-model="person.contact" ng-maxlength="10" placeholder="Enter your contact no"
+                                aria-describedby="contact1Prepend">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="border bg-light py-4 px-0" id="profileUrl" ng-class="{'px-2': !person.url}">
+                    <div class="row">
+                        <div class="col-3 text-center">
+                            <img class="border" ng-if="person.url" ng-src="{{person.url}}" alt="{{person.name}}"
+                                width="200em" height="200em">
+                            <span class="h4 text-dark" ng-if="!person.url">Enter the profile url to view</span>
+                        </div>
+                        <div class="col">
+                            <h2 class="text-dark" ng-if="person.name" ng-bind-html="person.name"></h2>
+                            <span class="h2 text-dark" ng-if="!person.name">Profile Name</span>
+                            <p class="text-secondary text-justify py-2 pr-4 pl-0" ng-if="person.description"
+                                ng-bind-html="person.description">
+                            </p>
+                            <p class="text-dark pt-2" ng-if="!person.description">Profile Description....</p>
+                            <div class="row">
+                                <div class="col" ng-if="person.addEmail">
+                                    <p class="text-secondary h5 text-justify py-2 pr-4 pl-0" ng-if="person.email">
+                                        <i class="bi bi-envelope mr-2"></i> <span ng-bind-html="person.email"></span>
+                                    </p>
+                                    <p class="text-dark pt-2" ng-if="person.addEmail && !person.email">Email Address</p>
+                                </div>
+                                <div class="col" ng-if="person.addContact">
+                                    <p class="text-secondary h5 text-justify py-2 pr-4 pl-0" ng-if="person.contact">
+                                        <i class="bi bi-telephone mr-2"></i> <span ng-bind-html="person.contact"></span>
+                                    </p>
+                                    <p class="text-dark pt-2" ng-if="person.addContact && !person.contact">Contact info
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

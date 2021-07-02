@@ -148,3 +148,21 @@ angular.module('myApp.view1', ['ngRoute'])
     };
   })
 
+  .controller('watchController', function ($scope) {
+    // Exercise 12
+    $scope.person = {
+      name: "Guido van Rossum",
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/220px-Guido-portrait-2014-drc.jpg",
+      description: `Guido van Rossum is a Dutch programmer best known as the creator of the Python programming language, 
+                    for which he was the "benevolent dictator for life" (BDFL) until he stepped down from the position in July 2018.`,
+      addEmail: true,
+      email: "guido@python.org",
+      addContact: true,
+      contact: 1234567890,
+    };
+
+    $scope.$watch("person.name", function (newVal, oldVal) {
+      $scope.errors = newVal ? false : { name: "should not be blank." };
+    });
+  })
+
