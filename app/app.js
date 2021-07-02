@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'ngSanitize',
+  'ngDialog',
   'myApp.view1',
   'myApp.view2',
   'myApp.version'
