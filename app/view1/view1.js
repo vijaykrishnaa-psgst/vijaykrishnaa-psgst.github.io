@@ -166,3 +166,15 @@ angular.module('myApp.view1', ['ngRoute'])
     });
   })
 
+  .controller('ngDialogController', function ($scope, ngDialog) {
+    // Exercise 13
+    $scope.openDialog = function () {
+      ngDialog.open({
+        template: '<p class="h2 m-5">Dialog Box Opened</p>',
+        className: 'ngdialog-theme-plain',
+        plain: true,
+        scope: $scope,
+        showClose: false
+      });
+    }
+  })

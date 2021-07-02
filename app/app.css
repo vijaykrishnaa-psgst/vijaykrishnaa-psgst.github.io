@@ -14,3 +14,8 @@ html,body{
 .button-width{
   width: 12em;
 }
+/* .ngdialog.ngdialog-theme-plain .ngdialog-content{
+  top:30% !important;
+  bottom: 50% !important;
+  background-color: #f8f9fa !important;
+} */
