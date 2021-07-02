@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and core components
 angular.module('myApp', [
   'ngRoute',
+  'ngSanitize',
   'myApp.view1',
   'myApp.view2',
   'myApp.version'
@@ -28,6 +29,16 @@ angular.module('myApp', [
         8: false,
         9: false,
         10: false,
+        // 11: false,
+        // 12: false,
+        // 13: false,
+        // 14: false,
+        // 15: false,
+        // 16: false,
+        // 17: false,
+        // 18: false,
+        // 19: false,
+        // 20: false,
       };
     }
     loadExercise();
