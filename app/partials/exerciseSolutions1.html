@@ -1,6 +1,107 @@
 <div>
     <!-- EXERCISES SOLUTION 11 TO 20  -->
-    <div ng-if="activeExercise == 11">
+    <div ng-if="activeExercise == 11" ng-controller="dataStoreController">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-lg mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="profileNamePrepend">Name</span>
+                    </div>
+                    <input type="text" class="form-control form-control-md" id="profileName" ng-model="vm.profile.name"
+                        placeholder="Enter your Name" aria-describedby="profileNamePrepend">
+                </div>
+                <div class="input-group input-group-lg mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="profileUrlPrepend">Profile URL</span>
+                    </div>
+                    <input type="text" class="form-control form-control-md" id="profileUrl" ng-model="vm.profile.url"
+                        placeholder="Enter a url" aria-describedby="profileUrlPrepend">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="descriptionPrepend">Description</span>
+                    </div>
+                    <textarea class="form-control form-control-md" id="description" ng-model="vm.profile.description"
+                        height="200" placeholder="Describe in words" aria-label="Description"></textarea>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="emailCheckbox"
+                                ng-model="addEmail">
+                            <label class="form-check-label" for="emailCheckbox">Add Email</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group" ng-show="addEmail">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="emailPrepend">Email</span>
+                            </div>
+                            <input type="email" class="form-control form-control-md" id="email"
+                                ng-model="vm.profile.email" placeholder="Enter your email address"
+                                aria-describedby="emailPrepend">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="mobileCheckbox"
+                                ng-model="addContact">
+                            <label class="form-check-label" for="mobileCheckbox">Add Contact no</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group" ng-show="addContact">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="contactPrepend">Contact No</span>
+                            </div>
+                            <input type="number" class="form-control form-control-md" id="contact"
+                                ng-model="vm.profile.contact" ng-maxlength="10" placeholder="Enter your contact no"
+                                aria-describedby="contactPrepend">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="border bg-light py-4 px-0" ng-class="{'px-2': !vm.profile.url}">
+                    <div class="row">
+                        <div class="col-3 text-center">
+                            <img class="border" ng-if="vm.profile.url" ng-src="{{vm.profile.url}}"
+                                alt="{{vm.profile.name}}" width="200em" height="200em">
+                            <span class="h4 text-dark" ng-if="!vm.profile.url">Enter the profile url to view</span>
+                        </div>
+                        <div class="col">
+                            <h2 class="text-dark" ng-if="vm.profile.name" ng-bind="vm.profile.name"></h2>
+                            <span class="h2 text-dark" ng-if="!vm.profile.name">Profile Name</span>
+                            <p class="text-secondary text-justify py-2 pr-4 pl-0" ng-if="vm.profile.description"
+                                ng-bind="vm.profile.description">
+                            </p>
+                            <p class="text-dark pt-2" ng-if="!vm.profile.description">Profile Description....</p>
+                            <div class="row">
+                                <div class="col" ng-if="addEmail">
+                                    <p class="text-secondary h5 text-justify py-2 pr-4 pl-0" ng-if="vm.profile.email">
+                                        <i class="bi bi-envelope mr-2"></i> <span ng-bind="vm.profile.email"></span>
+                                    </p>
+                                    <p class="text-dark pt-2" ng-if="addEmail && !vm.profile.email">Email Address</p>
+                                </div>
+                                <div class="col" ng-if="addContact">
+                                    <p class="text-secondary h5 text-justify py-2 pr-4 pl-0" ng-if="vm.profile.contact">
+                                        <i class="bi bi-telephone mr-2"></i> <span ng-bind="vm.profile.contact"></span>
+                                    </p>
+                                    <p class="text-dark pt-2" ng-if="addContact && !vm.profile.contact">Contact info</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="activeExercise == 12">
 
     </div>
 

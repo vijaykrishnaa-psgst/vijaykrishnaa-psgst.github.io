@@ -135,4 +135,16 @@ angular.module('myApp.view1', ['ngRoute'])
     };
   })
 
-  
+  .controller('dataStoreController', function ($scope) {
+    // Exercise 11
+    var vm = $scope.vm = this;
+    vm.profile = {
+      name: "AngularJs",
+      url: "https://miro.medium.com/max/1176/1*15CYVZdpsxir8KLdxEZytg.png",
+      description: `AngularJS is a very powerful JavaScript Framework. It is used in Single Page Application (SPA) projects. 
+      It extends HTML DOM with additional attributes and makes it more responsive to user actions. 
+      AngularJS is open source, completely free, and used by thousands of developers around the world. 
+      It is licensed under the Apache license version 2.0.`,
+    };
+  })
+
