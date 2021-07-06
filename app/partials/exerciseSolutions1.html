@@ -208,7 +208,18 @@
     </div>
 
     <div ng-if="activeExercise == 13" ng-controller="ngDialogController">
-        <button class="btn btn-primary my-3" ng-click="openDialog()">open Dialog Box</button>
+        <button class="btn btn-primary my-3" ng-click="openDialog()">open Plain Dialog Box</button>
+    </div>
+
+    <div ng-if="activeExercise == 14" ng-controller="ngDialogController1">
+        <form class="form-inline">
+            <div class="input-group mr-2">
+                <button class="btn btn-primary" ng-click="openDialog()">open Plain Dialog Box</button>
+            </div>
+            <div class="input-group mr-2">
+                <button class="btn btn-primary" ng-click="openDefaultDialog()">open Default Dialog Box</button>
+            </div>
+        </form>
     </div>
 
 </div>

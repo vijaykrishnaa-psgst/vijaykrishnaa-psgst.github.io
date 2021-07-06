@@ -170,11 +170,34 @@ angular.module('myApp.view1', ['ngRoute'])
     // Exercise 13
     $scope.openDialog = function () {
       ngDialog.open({
-        template: '<p class="h2 m-5">Dialog Box Opened</p>',
+        template: '<p class="h2 m-5">Plain Theme Dialog Box Opened</p>',
         className: 'ngdialog-theme-plain',
         plain: true,
-        scope: $scope,
-        showClose: false
+        scope: $scope
       });
     }
   })
+
+  .controller('ngDialogController1', ngDialogController1)
+ngDialogController1.$inject = ["$scope", "ngDialog"]
+function ngDialogController1($scope, ngDialog) {
+  // Exercise 14
+
+  $scope.openDialog = function () {
+    ngDialog.open({
+      template: '<p class="h2 m-5">Plain Theme Dialog Box Opened</p>',
+      className: 'ngdialog-theme-plain',
+      plain: true,
+      scope: $scope
+    });
+  }
+
+  $scope.openDefaultDialog = function () {
+    ngDialog.open({
+      template: '<p class="h2 m-5">Default Theme Dialog Box Opened</p>',
+      className: 'ngdialog-theme-default',
+      plain: true,
+      scope: $scope
+    });
+  }
+}
