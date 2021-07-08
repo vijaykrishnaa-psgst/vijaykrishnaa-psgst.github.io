@@ -232,7 +232,7 @@ function henchmenController($scope) {
     $scope.ascending = (value == 1) ? true : false;
     $scope.descending = (value == -1) ? true : false;
     if ($scope.ascending) $scope.sortBy((currentOrder == value) ? $scope.order : $scope.order.slice(1))
-    if ($scope.descending) $scope.sortBy($scope.order)
+    if ($scope.descending) $scope.sortBy((currentOrder == value) ? $scope.order.slice(1) : $scope.order)
     currentOrder = value;
   }
   $scope.isSelected = function (value) {
