@@ -264,12 +264,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="henchmen in henchmens | filter:search">
+                <tr ng-repeat="henchmen in henchmenQueredData = (henchmens | filter:search)">
                     <td ng-bind-html="henchmen.id"></td>
                     <td ng-bind-html="henchmen.name"></td>
                     <td ng-bind-html="henchmen.from"></td>
                     <td ng-bind-html="henchmen.year"></td>
                     <td ng-bind-html="henchmen.skill"></td>
+                </tr>
+                <tr ng-if="henchmenQueredData.length == 0">
+                    <td class="text-center" colspan="5">No Keyword Match Found</td>
                 </tr>
             </tbody>
         </table>
@@ -369,12 +372,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="henchmen in henchmens | filter:search | orderBy:order">
+                <tr ng-repeat="henchmen in henchmenQueredData = (henchmens | filter:search | orderBy:order)">
                     <td ng-bind-html="henchmen.id"></td>
                     <td ng-bind-html="henchmen.name"></td>
                     <td ng-bind-html="henchmen.from"></td>
                     <td ng-bind-html="henchmen.year"></td>
                     <td ng-bind-html="henchmen.skill"></td>
+                </tr>
+                <tr ng-if="henchmenQueredData.length == 0">
+                    <td class="text-center" colspan="5">No Keyword Match Found</td>
                 </tr>
             </tbody>
         </table>
