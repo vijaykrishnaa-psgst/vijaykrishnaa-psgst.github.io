@@ -205,7 +205,7 @@ function ngDialogController1($scope, ngDialog) {
 myApp.controller('henchmenController', henchmenController)
 henchmenController.$inject = ["$scope"]
 function henchmenController($scope) {
-  // Exercise 15
+  // Exercise 15, 16, 17
   $scope.henchmens = [
     { id: 1, name: "Luca Brasi", from: "The Godfather", year: 1972, skill: "Dismembering" },
     { id: 2, name: "Bellatrix Lestrange", from: "Harry Potter", year: 2007, skill: "Cruciatus Curse" },
@@ -218,4 +218,24 @@ function henchmenController($scope) {
     { id: 9, name: "Bob The Goon", from: "Batman", year: 1989, skill: "Marksmanship" },
     { id: 10, name: "Fritz", from: "Frankenstein", year: 1931, skill: "Torturing" },
   ]
+
+  // Exercise 17
+  $scope.ascending = true;
+  $scope.descending = false;
+  $scope.order = "id";
+  var currentOrder = 1;
+
+  $scope.sortBy = function (value) {
+    $scope.order = $scope.descending ? "-" + value : value;
+  }
+  $scope.orderBy = function (value) {
+    $scope.ascending = (value == 1) ? true : false;
+    $scope.descending = (value == -1) ? true : false;
+    if ($scope.ascending) $scope.sortBy((currentOrder == value) ? $scope.order : $scope.order.slice(1))
+    if ($scope.descending) $scope.sortBy($scope.order)
+    currentOrder = value;
+  }
+  $scope.isSelected = function (value) {
+    return $scope.order.includes(value);
+  }
 }
